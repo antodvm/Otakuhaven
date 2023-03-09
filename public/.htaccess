@@ -1,0 +1,13 @@
+RewriteEngine on   #Active le module de réécriture d'URL de Apache
+
+# La règle ci-après est exécutée s'il le nom du fichier ou répertoire n'existe pas
+
+RewriteCond %{REQUEST_FILENAME} !-d    
+RewriteCond %{REQUEST_FILENAME} !-f
+
+
+# La règle précise que tout ce qui est marqué dans l'URL sera associé à la valeur du GET url
+
+RewriteRule ^(.[a-zA-Z0-9\-\_\/]*)$ index.php?url=$1 [L,QSA]
+
+# Pour les drapeaux de réécriture, voir: https://httpd.apache.org/docs/2.4/fr/rewrite/flags.html

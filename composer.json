@@ -1,0 +1,16 @@
+{
+    "name": "anto/karmab",
+    "authors": [
+        {
+            "name": "anto"
+        }
+    ],
+    
+    "autoload": {
+        "psr-4": {
+            "Anto\\": "src/"
+        }
+    },
+
+    "require": {}
+}
