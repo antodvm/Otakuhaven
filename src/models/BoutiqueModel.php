@@ -8,7 +8,10 @@ class BoutiqueModel extends DbModels
 	
 	  public function getProducts() {
 		return $this->db->query("SELECT * FROM produit");
-	
+	  }
+
+	  public function getProductById($id) {
+		return $this->db->query("SELECT * FROM produit WHERE id = ?", [$id]);
 	  }
 
 	  public function getCategories() {

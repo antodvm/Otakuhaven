@@ -17,7 +17,6 @@ class BoutiqueController extends Controller
 
     private function getProducts($idSouscat)
     {
-
 		if($idSouscat){
 			return $this->boutique->getProductsSousCat($idSouscat)->fetchAll(); 
 		}
@@ -56,7 +55,6 @@ class BoutiqueController extends Controller
 
 		return $tab_cat_souscat;
 	}
-
 
 
 

@@ -18,7 +18,7 @@
 	<div class="row">
 		<div class="col-xl-3 col-lg-4 col-md-5">
 			<div class="sidebar-categories">
-				<div class="head">Catgories</div>
+				<div class="head">Categories</div>
 				<ul class="main-categories">
 
 					<?php foreach ($tab_cat_souscat as $cat) : ?>
@@ -85,15 +85,18 @@
 
 						<div class="col-lg-4 col-md-6">
 							<div class="single-product">
+								<a href="singleproduct/<?php echo $product['id'] ?>" class="image-product"> 
 								<img class="img-fluid" src="/img/Produit/<?php echo $product['image'] ?>" alt="">
+								</a>
 								<div class="product-details">
+									<a href="singleproduct/<?php echo $product['id'] ?>" class="name-product"> 
 									<h6><?php echo $product['nom'] ?></h6>
+									</a>
 									<div class="price">
 										<h6><?php echo $product['prix'] ?> €</h6>
 										<h6 class="l-through"><?php echo $product['prix'] * 2 ?></h6>
 									</div>
 									<div class="prd-bottom">
-
 										<a href="" class="social-info">
 											<span class="ti-bag"></span>
 											<p class="hover-text">add to bag</p>
@@ -101,14 +104,6 @@
 										<a href="" class="social-info">
 											<span class="lnr lnr-heart"></span>
 											<p class="hover-text">Wishlist</p>
-										</a>
-										<a href="" class="social-info">
-											<span class="lnr lnr-sync"></span>
-											<p class="hover-text">compare</p>
-										</a>
-										<a href="" class="social-info">
-											<span class="lnr lnr-move"></span>
-											<p class="hover-text">view more</p>
 										</a>
 									</div>
 								</div>

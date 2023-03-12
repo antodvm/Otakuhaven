@@ -4,6 +4,7 @@ require '../vendor/autoload.php';
 use Anto\Controllers\AccueilController;
 use Anto\Controllers\ContactController;
 use Anto\Controllers\BoutiqueController;
+use Anto\Controllers\SingleProductController;
 
 
 
@@ -27,8 +28,13 @@ if($ctrl_url=="contact"){
 	$controller= new Anto\Controllers\ContactController();
 	$controller->index();
 }
+
 elseif($ctrl_url=="boutique"){
 	$controller= new Anto\Controllers\BoutiqueController();
+	$controller->index($param1_url);
+}
+elseif($ctrl_url=="singleproduct"){
+	$controller= new Anto\Controllers\SingleProductController();
 	$controller->index($param1_url);
 }
 else
