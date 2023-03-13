@@ -57,10 +57,20 @@ class BoutiqueController extends Controller
 	}
 
 
+    // private function AddProdCard(){
+    //     return $this->boutique->AddProdCard()->fetchAll();
+    // }
+
+    private function GetPanier(){
+        return $this->boutique->GetPanier()->fetchAll();
+    }
+
 
     public function index($idSouscat=null)
     {
         $produits = $this->getProducts($idSouscat);
+
+        $panier = $this->GetPanier();
 
 		$tab_cat_souscat = $this-> GetListeCatSousCat();
        

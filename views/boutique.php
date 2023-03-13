@@ -25,15 +25,15 @@
 						<li class="main-nav-list">
 							<a data-toggle="collapse" href="#cat<?php echo $cat['id']; ?>" aria-expanded="true" aria-controls="cat<?php echo $cat['id']; ?>">
 								<span class="lnr 1nr-arrow-right"></span>
-								<?php echo $cat['nom']; ?>
+								<?php echo $cat['categorie']; ?>
 								<span class="number">(<?php echo $cat['total'] ?? 0; ?>)</span>
 							</a>
 
 							<ul class="collapse" id="cat<?php echo $cat['id']; ?>" data-toggle="collapse" aria-expanded="false" aria-controls="cat<?php echo $cat['id']; ?>">
 								<?php foreach ($cat['souscat'] as $souscat) : ?>
 									<li class="main-nav-list child">
-										<a href="boutique/<?php echo $cat['nom']; ?>/<?php echo $souscat['id'] ?>">
-											<?php echo $souscat['nom'] ?>
+										<a href="boutique/<?php echo $cat['categorie']; ?>/<?php echo $souscat['id'] ?>">
+											<?php echo $souscat['sous_categorie'] ?>
 										</a>
 									</li>
 								<?php endforeach; ?>
@@ -86,7 +86,7 @@
 						<div class="col-lg-4 col-md-6">
 							<div class="single-product">
 								<a href="singleproduct/<?php echo $product['id'] ?>" class="image-product"> 
-								<img class="img-fluid" src="/img/Produit/<?php echo $product['image'] ?>" alt="">
+								<img class="img-fluid" src="img/Produits/<?php echo $product['img'] ?>" alt="">
 								</a>
 								<div class="product-details">
 									<a href="singleproduct/<?php echo $product['id'] ?>" class="name-product"> 
@@ -94,10 +94,10 @@
 									</a>
 									<div class="price">
 										<h6><?php echo $product['prix'] ?> €</h6>
-										<h6 class="l-through"><?php echo $product['prix'] * 2 ?></h6>
+										<h6 class="l-through"><?php echo $product['prix'] *1.1 ?></h6>
 									</div>
 									<div class="prd-bottom">
-										<a href="" class="social-info">
+										<a href="panier/add/<?php echo $product['id'];?>" class="social-info">
 											<span class="ti-bag"></span>
 											<p class="hover-text">add to bag</p>
 										</a>

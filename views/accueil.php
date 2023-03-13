@@ -1,3 +1,4 @@
+	
 	<!-- start banner Area -->
 	<section class="banner-area">
 		<div class="container">
